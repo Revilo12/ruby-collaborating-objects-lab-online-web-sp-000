@@ -22,8 +22,14 @@ class Artist
     song.artist = self
   end
 
+<<<<<<< HEAD
   def self.find_or_create_by_name(name)
     found = self.all.find {|artist| artist.name == name}
+=======
+  def find_or_create_by_name(name)
+    found = self.all.find {|artist| artist.name == name}
+    binding.pry
+>>>>>>> 18b930eef12d4280b1eb371e360243cc24a8c99d
     if found
       found
     else
@@ -32,7 +38,11 @@ class Artist
   end
 
   def print_songs
+<<<<<<< HEAD
     self.songs.each {|song| print "#{song.name}\n"}
+=======
+    self.all.each {|song| print "#{song.name}\n"}
+>>>>>>> 18b930eef12d4280b1eb371e360243cc24a8c99d
   end
 
 end
